@@ -81,4 +81,15 @@ binary_df.write.saveAsTable("field_demos.tauherng.flowers")
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC
+# MAGIC Actually, Method 2 above also has some limitations, specified in the [Reference Solution page](https://docs.databricks.com/en/machine-learning/reference-solutions/images-etl-inference.html) as well.
+# MAGIC
+# MAGIC >**Limitations: Image file sizes**
+# MAGIC >For large image files (average image size greater than 100 MB), Databricks recommends using the Delta table only to manage the metadata (list of file names) and loading the images from >the object store using their paths when needed.
+# MAGIC
+# MAGIC So let's see how we can apply a general approach to handle this issue
+
+# COMMAND ----------
+
 
